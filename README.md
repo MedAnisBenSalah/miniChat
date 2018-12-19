@@ -8,7 +8,8 @@
 </h4>
 
 
-<h1 align="center">Contents</h1>
+
+<h2 align="center">Contents</h2>
 <p align="center">
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#installation">Installation</a> •
@@ -55,4 +56,4 @@ In order to setup and run this example, follow these simple steps:
 * <a href="https://www.ruby-lang.org">Ruby</a>
 * <a href="https://rubyonrails.org/">Ruby On Rails</a>
 * <a href="https://pusher.com/">Pusher</a>
-* <a href="https://www.sqlite.org/>SQLite3</a>
+* <a href="https://www.sqlite.org/">SQLite3</a>
