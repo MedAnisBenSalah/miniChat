@@ -1,24 +1,58 @@
-# README
+<h1 align="center">
+  <br>
+  miniChat
+</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h4 align="center">
+  miniChat is a real-time, small and fun chat platform using the amazing <a href="https://pusher.com/">Pusher</a>, developed for the purpose of showcasing some <a href="https://rubyonrails.org/">Ruby On Rails</a> examples for <a href="https://www.united-signals.com/">United Signals GmbH</a>.
+</h4>
 
-Things you may want to cover:
 
-* Ruby version
+<h1 align="center">Contents</h1>
+<p align="center">
+  <a href="#prerequisites">Prerequisites</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#media">Media</a> •
+  <a href="#links">Links</a>
+</p>
 
-* System dependencies
+# Prerequisites
 
-* Configuration
+In order to be able to install and run this app, you'll need to setup few tools beforehand:
 
-* Database creation
+* Make sure that <a href="https://www.ruby-lang.org">Ruby</a> and <a href="https://rubyonrails.org/">Ruby on Rails framework</a> are installed (<a href="https://guides.rubyonrails.org/getting_started.html">Installation guide</a>).
+* Create a <a href="https://dashboard.pusher.com/accounts/sign_up">free Pusher account</a>.
+* Create a new Pusher app, this should be the first step you're prompted to do after successfully creating your account.
+* Navigate to the "App Keys" tab and get you app_id, key, secret and cluster, save them for later.
 
-* Database initialization
+# Installation
 
-* How to run the test suite
+In order to setup and run this example, follow these simple steps:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Clone this repository inside your local machine.
+* Navigate to the repository's directory.
+* Install all dependencies/gems by executing the following command: ```> rails bundle install```
+* Setup the sqlite3 database by executing the following command: ```> rails db:setup```
+* To generate the application.yml file, execute the following command: ```> rails figaro install```
+* Navigate to the newly generated application.yml (config/application.yml) and paste the following code:
+    ```
+    PUSHER_APP_ID: 'xxxxxx'
+    PUSHER_KEY: 'xxxxxxxxxxxxxxxxx'
+    PUSHER_SECRET: 'xxxxxxxxxxxxxx'
+    PUSHER_CLUSTER: 'xx'
+    ```
+    
+* Replace the Pusher credentiels above with your own app credentiels created in the <a href="#prerequisites">prerequisites section</a>.
+* Start the development server by executing the following command: ```> rails server```
 
-* Deployment instructions
+# Media
 
-* ...
+![User 1](https://github.com/MedAnisBenSalah/miniChat/blob/master/media/screen1.png)
+![User 2](https://github.com/MedAnisBenSalah/miniChat/blob/master/media/screen2.png)
+
+# Links
+
+* <a href="https://www.ruby-lang.org">Ruby</a>
+* <a href="https://rubyonrails.org/">Ruby On Rails</a>
+* <a href="https://pusher.com/">Pusher</a>
+* <a href="https://www.sqlite.org/>SQLite3</a>
