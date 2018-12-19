@@ -24,7 +24,7 @@ In order to be able to install and run this app, you'll need to setup few tools 
 * Make sure that <a href="https://www.ruby-lang.org">Ruby</a> and <a href="https://rubyonrails.org/">Ruby on Rails framework</a> are installed (<a href="https://guides.rubyonrails.org/getting_started.html">Installation guide</a>).
 * Create a <a href="https://dashboard.pusher.com/accounts/sign_up">free Pusher account</a>.
 * Create a new Pusher app, this should be the first step you're prompted to do after successfully creating your account.
-* Navigate to the "App Keys" tab and get you app_id, key, secret and cluster, save them for later.
+* Navigate to the "App Keys" tab and get your app_id, key, secret and cluster, save them for later.
 
 # Installation
 
@@ -43,7 +43,7 @@ In order to setup and run this example, follow these simple steps:
     PUSHER_CLUSTER: 'xx'
     ```
     
-* Replace the Pusher credentiels above with your own app credentiels created in the <a href="#prerequisites">prerequisites section</a>.
+* Replace the Pusher credentials above with your own app credentials created in the <a href="#prerequisites">prerequisites section</a>.
 * Start the development server by executing the following command: ```> rails server```
 
 # Media
