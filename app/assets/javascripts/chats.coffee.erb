@@ -1,0 +1,46 @@
+$(document).ready =>
+      username = ''
+
+	  # This simply receives chat data from pusher below and adds HTML code
+      updateChat = (data) ->
+        $('.chat-box').append """
+          <div class="col-12">
+            <div class="chat bg-secondary d-inline-block text-left text-white mb-2">
+              <div class="chat-bubble">
+                <small class="chat-username">#{data.username}</small>
+                <p class="m-0 chat-message">#{data.message}</p>
+              </div>
+            </div>
+          </div>
+        """
+        return
+
+	  # Register a key up event on the sidebar
+      $('.sidebar-form').keyup (event) ->
+        if event.keyCode == 13 and !event.shiftKey
+          username = event.target.value
+          $('.username').append(username)
+          $('#username').val(username)
+          $('.username').removeClass('d-none')
+          $('.sidebar-form').addClass('d-none')
+          $('#message').removeAttr("disabled")
+          $('#message').focus()
+        return
+
+      $('#chat-form').on 'ajax:success', (data) ->
+        $('#chat-form')[0].reset()
+        return
+
+	  # Create a new pusher instance
+      pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',
+        cluster: '<%= ENV["PUSHER_CLUSTER"] %>'
+        encrypted: true)
+		
+	  # Subscribe to the chat channel
+      channel = pusher.subscribe('chat')
+	  
+	  # Whenever we have a new chat message, invoke updateChat above
+      channel.bind 'new', (data) ->
+        updateChat data
+        return
+      return
