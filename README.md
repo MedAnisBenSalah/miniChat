@@ -4,7 +4,7 @@
 </h1>
 
 <h4 align="center">
-  miniChat is a real-time, small and fun chat platform using the amazing <a href="https://pusher.com/">Pusher</a>, developed for the purpose of showcasing some <a href="https://rubyonrails.org/">Ruby On Rails</a> examples for <a href="https://www.united-signals.com/">United Signals GmbH</a>.
+  miniChat is a real-time, small and fun chat platform using the amazing <a href="https://pusher.com/">Pusher</a>, developed for the purpose of showcasing some <a href="https://rubyonrails.org/">Ruby On Rails</a> examples.
 </h4>
 
 
